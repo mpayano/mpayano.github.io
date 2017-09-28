@@ -1,31 +1,33 @@
+// Basic sticky navbar component 
 $(document).ready(function() {
-  // Custom 
-  var stickyToggle = function(sticky, stickyWrapper, scrollElement) {
-    var stickyHeight = sticky.outerHeight();
-    var stickyTop = stickyWrapper.offset().top;
-    if (scrollElement.scrollTop() >= stickyTop){
-      stickyWrapper.height(stickyHeight);
-      sticky.addClass("is-sticky");
-    }
-    else{
-      sticky.removeClass("is-sticky");
-      stickyWrapper.height('auto');
-    }
-  };
-  
-  // Find all data-toggle="sticky-onscroll" elements
-  $('[data-toggle="sticky-onscroll"]').each(function() {
-    var sticky = $(this);
-    var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
-    sticky.before(stickyWrapper);
-    sticky.addClass('sticky');
-    
-    // Scroll & resize events
-    $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function() {
-      stickyToggle(sticky, stickyWrapper, $(this));
-    });
+
+  // Select DOM element with "data-toggle" set to "sticky-navbar"
+  $('[data-toggle="sticky-navbar"]').each(function() {
+
+    // When the element is no longer visible due to page scroll, 
+    // move it to the top of the screen
+    var stickyToggle = function(navbar, navbarWrapper, scrollElement) {
+      if (scrollElement.scrollTop() >= navbarWrapper.offset().top){
+        navbarWrapper.height(navbar.outerHeight());
+        navbar.addClass("is-sticky");
+      } else{
+        navbar.removeClass("is-sticky");
+        navbarWrapper.height('auto');
+      }
+    };
+
+    // Wrapper to maintain offset from top of window
+    var navbar = $(this),
+        navbarWrapper = $('<div>').addClass('sticky-navbar-wrapper');
+
+    navbar.before(navbarWrapper).addClass('sticky');
     
     // On page load
-    stickyToggle(sticky, stickyWrapper, $(window));
+    stickyToggle(navbar, navbarWrapper, $(window));
+
+    // On "scroll" event
+    $(window).on('scroll.sticky-navbar resize.sticky-navbar', function() {
+      stickyToggle(navbar, navbarWrapper, $(this));
+    });
   });
 });
