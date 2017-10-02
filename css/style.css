@@ -12,12 +12,7 @@ html, body {
   color: #666;
   background: #e5e5e5;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 a {
@@ -27,11 +22,16 @@ a:hover {
   text-decoration: underline;
   color: #fff;
 }
-a:focus {
-  text-decoration: none;
+
+/* Overriding Bootstrap Button Styles */
+.btn-outline-primary {
+  color: #49c5ff;
+  font-weight: 600;
+  border-color: #49c5ff;
 }
-p {
-  line-height: 1.5;
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary.active, .open > .dropdown-toggle.btn-outline-primary {
+  background: #49c5ff;
+  border-color: #49c5ff;
 }
 
 /* Header Styling */
@@ -62,29 +62,17 @@ p {
   top: 15px;
   right: 15px;
 }
-.navbar-wrapper {
-  background: #02a9f4;
-  padding: 5px 0;
-  position: absolute;
+
+/* Sticky Navbar */
+.sticky.is-sticky {
+  background: #49c5ff;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
   width: 100%;
-}
-.navbar-wrapper .navbar {
-  display: inline-block;
-}
-.navbar-wrapper .navbar li {
-  margin-right: 30px;
-  display: inline-block;
-  background: none;
-}
-.navbar-wrapper .navbar li:last-child {
-  margin: 0;
 }
 
 /* Section Styling */
-.wrapper {
-  padding: 100px 0;
-  background: #e5e5e5;
-}
 .section {
   -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
   -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
@@ -98,16 +86,14 @@ p {
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-.section-title {
-  font-size: 24px;
-  text-align: center;
-}
+
+/* Timeline Styling */
 .timeline {
   border-left: 3px solid #49c5ff;
   border-radius: 2px;
   position: relative;
   padding: 0 30px;
-  margin-left: 280px;
+  margin-left: 220px;
 }
 .timeline .item {
   position: relative;
