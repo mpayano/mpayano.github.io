@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 27%;
 }
 h1{
-  font-size: 6.5em;
+  font-size: 8.5em;
   color: white;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: lighter;
@@ -32,7 +32,7 @@ h1{
   color: white;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: lighter;
-  font-size: 2.8em;
+  font-size: 3.8em;
 }
 a {
   color: #fff;
@@ -57,12 +57,24 @@ a:hover {
   margin-left: 40%;
 }
 
-.navbar{
-  margin-left: 30%;
-  color: white;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-weight: lighter;
+.navbar.sticky{
+    margin-left: 48%;
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: lighter;
+    font-size: 30px;
 }
+
+/*.nav2 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin-left: ;
+}*/
 
 /* Overriding Bootstrap Button Styles */
 .btn-outline-primary {
@@ -145,7 +157,7 @@ border-radius: 50%;
 .great{
   font-size: 70px;
   margin-top: -64px;
-  margin-left: 33%;
+  margin-left: 34%;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: lighter;
   color: white;
@@ -154,7 +166,7 @@ border-radius: 50%;
 
 .int{
   margin-top: -48px;
-  margin-left: 49%;
+  margin-left: 51%;
   font-family: 'Playfair Display', serif;
   font-style: italic;
   color: white;
@@ -193,7 +205,7 @@ border-radius: 50%;
   font-size: 30px;
 }
 .mb3{
-    margin-top: -48px;
+    margin-top: 40px;
     margin-left: 31%;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: lighter;
@@ -215,7 +227,7 @@ border-radius: 50%;
   top: 0;
   z-index: 1000;
   width: 100%;
-  left: -30%;
+  left: -37%;
 }
 
 /* Section Styling */
@@ -364,13 +376,16 @@ border-radius: 50%;
 }
 
 #section-3 .card{
-  color: #847089;
-    border-radius: .25rem;
+    color: #847089;
     text-align: center;
     margin-left: -6%;
+    width: 50%;
 
 }
 
+.mb3s{
+  color: #0D0B30
+}
 .somewhere{
     color: #847089;
     font-weight: 600;
@@ -398,17 +413,24 @@ border-radius: 50%;
 
 .card{
   position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    margin-top: 21px;
-    margin-left: 22%;
-    color:  #0D0B30;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  margin-top: 21px;
+  margin-left: 22%;
+  color:  #0D0B30;
+}
+
+#section-3 span{
+  text-align: center;
+  display: block;
+  margin-top: 15px;
+  color: #0D0B30;
+  font-size: 1.6em;
 }
 
 .animal{
@@ -579,7 +601,8 @@ border-radius: 50%;
 }
 
 
-@media (min-width: 414px) and (max-width: 726px){
+
+@media only screen and (max-width: 726px){
 
 
   h1 {
@@ -673,6 +696,7 @@ h5{
       margin-top: 21px;
       text-align: inherit;
   }
+
 .chicaDiva4{
   margin-left: 21%;
 }
@@ -764,4 +788,104 @@ div.nav2 {
 
 }
 
+}
+
+@media only screen and (max-width: 400px){
+
+img{
+  display: none;
+}
+
+h1 , h4{
+  position: relative;
+  bottom: 59px;
+}
+
+.mb3 {
+  color: black;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 0 10px 0;
+}
+
+.nav2{
+  position`
+}
+
+.nav{
+
+}
+
+.int{
+  margin-top: -58px;
+  margin-left: 39px;
+
+}
+
+.great{
+  margin-top: 57px;
+  margin-left: 19px;
+}
+
+.looking{
+  margin-left: 5%;
+  margin-top: -43px;
+}
+
+.animal2 {
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+}
+
+.bbc2 {
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+}
+
+.yelp4 {
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+}
+
+
+h4.chicaDiva4 {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+}
+
+/*sticky navbar */
+
+.sticky.is-sticky {
+  left: -48%;
+}
+
+.mb3 {
+    color: white;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0 10px 0;
+}
+
+
+.mb3s{
+    padding: 8px 8px 8px 8px;
+    color: #0D0B30;
+    margin-left: 68px;
 }
